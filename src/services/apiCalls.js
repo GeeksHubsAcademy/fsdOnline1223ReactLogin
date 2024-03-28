@@ -1,6 +1,7 @@
 import axios from "axios";
 
 // const API_URL = "https://rickandmortyapi.com/api"
+const API_RM_URL = "https://rickandmortyapi.com/api"
 const API_URL = "http://localhost:4000/api/";
 // const API_URL = "aquí hay una url para un entorno de desarrollo"
 
@@ -17,14 +18,14 @@ export const loginCall = async (credentials) => {
 // }
 
 export const bringAllCharacters = async () => {
-  const res = await axios.get(`${API_URL}/character` /*headers*/);
+  const res = await axios.get(`${API_RM_URL}/character` /*headers*/);
 
   return res.data.results;
 };
 
 export const bringCharacterById = async (id) => {
   // puedo preparar la información para enviar al servidor
-  const res = await axios.get(`${API_URL}/character/${id}`);
+  const res = await axios.get(`${API_RM_URL}/character/${id}`);
 
   return res.data;
 };
