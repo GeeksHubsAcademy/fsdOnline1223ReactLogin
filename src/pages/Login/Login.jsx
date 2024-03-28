@@ -39,7 +39,8 @@ export const Login = () => {
 
       console.log(passport);
       //Guardaríamos passport bien en RDX o session/localStorage si no disponemos del primero
-
+      sessionStorage.setItem("passport", JSON.stringify(passport))
+      
       setMsg(`${uDecodificado.name}, bienvenid@ de nuevo.`);
 
       setTimeout(() => {
